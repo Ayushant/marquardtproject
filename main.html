@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .main-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <form action="https://sheetdb.io/api/v1/7ytny2rnk5s6m" method="post" id="sheetdb-form"  >
+       
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Product Details Form</h1>
+    <form id="productForm">
+      <div class="form-group">
+        <label for="id">ID Number</label>
+        <input type="number" id="id" name="data[ID No.]" required>
+      </div>
+      <div class="form-group">
+        <label for="productDetail">Product Detail</label>
+        <input type="text" id="productDetail" name="data[Prod Detail]" required>
+      </div>
+      <div class="form-group">
+        <label for="outDate">Out Date</label>
+        <input type="date" id="outDate" name="data[OUT date]" required>
+      </div>
+      <div class="form-group">
+        <label for="inDate">In Date</label>
+        <input type="date" id="inDate" name="data[IN date]" required>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+  </div>
+  <script>
+    // const apiUrl = 'https://script.google.com/macros/s/your-script-id/exec';
+
+    // document.getElementById('productForm').addEventListener('submit', function(event) {
+    //   event.preventDefault();
+    //   const formData = new FormData(document.getElementById('productForm'));
+    //   fetch(apiUrl, {
+    //     method: 'POST',
+    //     body: new URLSearchParams(formData)
+    //   })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //       document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+    //     })
+    //     .catch(error => {
+    //       document.getElementById('result').innerText = 'Error: ' + error;
+    //     });
+    // });
+  </script>
+</body>
+</html>
+
+      </form>
+
+
+
+        <script>
+
+
+
+            var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            window.open('page2.html', '_blank');
+
+          });
+        });
+        </script>
+</body>
+</html>
